@@ -1,5 +1,9 @@
 # JC Codex Engineering Templates
 
+[![Validate](https://github.com/jacivaldocarvalho/jc-codex-engineering-templates/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/jacivaldocarvalho/jc-codex-engineering-templates/actions/workflows/validate.yml)
+[![GitHub release](https://img.shields.io/github/v/release/jacivaldocarvalho/jc-codex-engineering-templates)](https://github.com/jacivaldocarvalho/jc-codex-engineering-templates/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Biblioteca de instruções modulares para OpenAI Codex, versão 1.0.0. Os templates ajudam a orientar planejamento, engenharia, segurança e validação sem depender deste repositório depois da instalação.
 
 - **new-project:** discovery, decisões de arquitetura, bootstrap e implementação incremental.

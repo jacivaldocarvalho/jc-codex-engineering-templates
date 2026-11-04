@@ -31,6 +31,21 @@ class TemplatesTest(unittest.TestCase):
                 self.assertIn(f'`{name}.md`', guide)
             self.assertIn('.entire/agent-guide.md', guide)
 
+    def test_high_impact_approval_policy(self):
+        policies = []
+        for kind in ('new-project', 'existing-project'):
+            guide = (ROOT / 'templates' / kind / 'AGENTS.md').read_text()
+            policy = guide.split('## Aprovação para operações de alto impacto\n', 1)[1].split('\n## ', 1)[0]
+            for requirement in ('deploy em produção', 'operações destrutivas',
+                                'migrações irreversíveis', 'alterações sensíveis de infraestrutura',
+                                'exposição de dados', 'custos externos',
+                                'autorização explícita e específica', 'operação e seu escopo',
+                                'tarefa geral já tenha sido aprovada', 'instruções superiores',
+                                'sandbox', 'mecanismos de aprovação do Codex'):
+                self.assertIn(requirement, policy)
+            policies.append(policy)
+        self.assertEqual(*policies)
+
     def test_install_and_idempotence(self):
         for kind in ('new-project', 'existing-project'):
             with self.subTest(kind=kind), tempfile.TemporaryDirectory() as tmp:

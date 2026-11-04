@@ -9,6 +9,9 @@ Classifique pelo impacto, reversibilidade e risco: **econômico** para mudanças
 
 Leia somente arquivos relevantes, limite saídas, reutilize contexto e evite relatórios repetidos. Faça mudanças pequenas; execute testes proporcionais e não repita verificações comprovadas sem necessidade. Economia de tokens não sobrepõe correção, segurança ou testes obrigatórios.
 
+## Aprovação para operações de alto impacto
+Antes de executar deploy em produção, operações destrutivas, migrações irreversíveis, alterações sensíveis de infraestrutura, exposição de dados ou ações que gerem custos externos, obtenha autorização explícita e específica para a operação e seu escopo, mesmo que a tarefa geral já tenha sido aprovada. Prepare uma proposta concreta e revisável antes de solicitar autorização. Respeite instruções superiores, sandbox e mecanismos de aprovação do Codex; esta política não concede permissões adicionais.
+
 ## Carregamento seletivo
 Estes arquivos não são carregados automaticamente: leia sob demanda os módulos de `.agents/` relevantes à tarefa: `frontend.md`, `backend.md`, `devops.md`, `devsecops.md`, `sre.md`, `ai.md` e `security.md`. Leia os padrões relevantes em `.agents/standards/`: `engineering.md`, `architecture.md`, `clean-code.md`, `testing.md`, `security.md`, `observability.md` e `ai-finops.md`. Não carregue todos por padrão. Se `.entire/agent-guide.md` existir e for relevante, leia-o sem sobrescrevê-lo; Entire é opcional. Instruções superiores e arquivos AGENTS.md mais específicos prevalecem conforme a hierarquia do Codex.
 
